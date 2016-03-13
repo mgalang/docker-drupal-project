@@ -1,0 +1,12 @@
+{
+  "name": "docker-drupal",
+  "version": "1.0.0",
+  "description": "Build helper for docker drupal project",
+  "scripts": {
+    "docker_build": "docker build -t docker/drupal .",
+    "docker_start": "docker run -P --name docker_drupal -d -p 8080:80 -p 8022:22 -t docker/drupal",
+    "docker_stop": "docker stop docker_drupal && docker rm docker_drupal"
+  },
+  "author": "Marc Galang",
+  "license": "MIT"
+}

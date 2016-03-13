@@ -1,0 +1,7 @@
+node_module/*
+project/vendor
+project/www/core
+project/www/modules/contrib
+project/www/themes/contrib
+project/www/profiles/contrib
+project/www/sites/default/files

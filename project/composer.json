@@ -1,0 +1,27 @@
+{
+    "name": "My Drupal Project",
+    "description": "A drupal project with docker",
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.0.20",
+        "cweagans/composer-patches": "~1.0",
+        "drupal/core": "8.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8"
+    },
+    "extra": {
+        "installer-paths": {
+            "www/core": ["type:drupal-core"],
+            "www/modules/contrib/{$name}": ["type:drupal-module"],
+            "www/themes/contrib/{$name}": ["type:drupal-theme"]
+        }
+    }
+}

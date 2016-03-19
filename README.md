@@ -1,5 +1,5 @@
-# Drupal Project with Docker
-A project template for Drupal development with Docker.
+# Drupal Site Project with Docker
+A template for local Drupal site project development with Docker.
 
 # Getting started
 Install the build helper.

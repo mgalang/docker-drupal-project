@@ -26,3 +26,6 @@ The /project directory contains an example composer drupal project. The 'www' di
 ```
 npm run docker_stop
 ```
+
+# @Todo
+Drush from outside docker.

@@ -56,7 +56,7 @@ ADD ./container_config/default /etc/nginx/sites-available/
   RUN drupal init
 
 #Setup supervisor services
-  RUN echo '[program:nginx]\ncommand=/usr/sbin/nginx\nautostart=true\n\n' >> /etc/supervisor/supervisord.conf
+  RUN echo '[program:nginx]\ncommand=/usr/sbin/nginx -g "daemon off;"\n\n' >> /etc/supervisor/supervisord.conf
   RUN echo '[program:sshd]\ncommand=/usr/sbin/sshd -D\n\n' >> /etc/supervisor/supervisord.conf
   RUN echo '[program:php5]\ncommand=/usr/sbin/php5-fpm -D\n\n' >> /etc/supervisor/supervisord.conf
 

@@ -2,29 +2,31 @@
 A template for local Drupal site project development with Docker.
 
 # Getting started
-Install the build helper.
+Build the container
 ```
-npm install
-```
-
-# Build the container
-```
-npm run docker_build
+docker build -t drupal-web .
 ```
 
-# Start the container
+# Start your up with docker-compose
 ```
-npm run docker_start
+docker-compose up
 ```
+
 You should now be able to SSH to port 8022 with username as root and password as root.
 
 The webserver could be accessed on port 8080.
 
 The /project directory contains an example composer drupal project. The 'www' directory is the root directory of your drupal site which is added as a volume inside docker on /var/www.
 
-# Stop and remove container
+## Drupal configuration
+Mysql host: db
+Mysql user: root
+Mysql password: password
+Mysql database: drupal
+
+# Stopping your app
 ```
-npm run docker_stop
+docker-compose stop
 ```
 
 # @Todo

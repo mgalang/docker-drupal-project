@@ -6,7 +6,7 @@ services:
       - "8080:80"
       - "8022:22"
     volumes:
-      - ./project/www:/var/www
+      - ./project:/var/site
 
   db:
     image: mysql

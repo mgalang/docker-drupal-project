@@ -12,20 +12,17 @@ docker build -t drupal-web .
 docker-compose up
 ```
 
-You should now be able to SSH to port 8022 with username as root and password as root.
+> You should now be able to SSH to port 8022 with username as root and password as root.
 
-The webserver could be accessed on port 8080.
+> The webserver could be accessed on port 8080.
 
-The /project directory contains an example composer drupal project. The 'www' directory is the root directory of your drupal site which is added as a volume inside docker on /var/www.
+> The /project directory contains an example composer drupal project. The 'www' directory is the root directory of your drupal site which is added as a volume inside docker on /var/www.
 
-## Drupal configuration
-Mysql host: db
-
-Mysql user: root
-
-Mysql password: password
-
-Mysql database: drupal
+## Database configuration
+* Host: db
+* User: root
+* Password: password
+* Database: drupal
 
 # Stopping your app
 ```

@@ -1,0 +1,17 @@
+version: '2'
+services:
+  drupal-web:
+    build: .
+    ports:
+      - "8080:80"
+      - "8022:22"
+    volumes:
+      - ./project/www:/var/www
+
+  db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: drupal

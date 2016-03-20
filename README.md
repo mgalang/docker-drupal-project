@@ -7,7 +7,7 @@ Build the container
 docker build -t drupal-web .
 ```
 
-# Start your up with docker-compose
+# Start your app with docker-compose
 ```
 docker-compose up
 ```

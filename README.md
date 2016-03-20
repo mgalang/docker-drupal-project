@@ -20,8 +20,11 @@ The /project directory contains an example composer drupal project. The 'www' di
 
 ## Drupal configuration
 Mysql host: db
+
 Mysql user: root
+
 Mysql password: password
+
 Mysql database: drupal
 
 # Stopping your app

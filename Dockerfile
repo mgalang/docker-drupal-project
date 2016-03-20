@@ -29,7 +29,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ADD ./container_config/default /etc/nginx/sites-available/
 
 #Install mysql
-  RUN apt-get install -y mysql-server mysql-client
+  RUN apt-get install -y mysql-client
 
 #Install and setup ssh
   RUN apt-get install -y openssh-server
@@ -57,7 +57,6 @@ ADD ./container_config/default /etc/nginx/sites-available/
 
 #Setup supervisor services
   RUN echo '[program:nginx]\ncommand=/usr/sbin/nginx\nautostart=true\n\n' >> /etc/supervisor/supervisord.conf
-  RUN echo '[program:mysql]\ncommand=/usr/bin/pidproxy /var/run/mysqld/mysqld.pid /usr/sbin/mysqld\nautostart=true\nautorestart=true\n\n' >> /etc/supervisor/supervisord.conf
   RUN echo '[program:sshd]\ncommand=/usr/sbin/sshd -D\n\n' >> /etc/supervisor/supervisord.conf
   RUN echo '[program:php5]\ncommand=/usr/sbin/php5-fpm -D\n\n' >> /etc/supervisor/supervisord.conf
 
